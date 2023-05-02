@@ -3,18 +3,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:fortestpages/customized/FormButton.dart';
-import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fortestpages/pages/signin/cubit/cubit.dart';
 import 'package:fortestpages/pages/signin/cubit/states.dart';
-class SignIn extends StatefulWidget {
-  const SignIn({Key? key}) : super(key: key);
 
-  @override
-  State<SignIn> createState() => _SignInState();
-}
 
-class _SignInState extends State<SignIn> {
+class SignIn extends StatelessWidget {
+   SignIn({Key? key}) : super(key: key);
 
   bool isObscurePassword = true;
   String email = "";
@@ -26,7 +21,7 @@ class _SignInState extends State<SignIn> {
     return BlocProvider(
       create: (BuildContext context) => SignInCubit(),
       child: BlocConsumer<SignInCubit, SignInStates>(
-          listener:(context, state){},
+        listener:(context, state){},
         builder: (context, state)
         {
           return Scaffold(
@@ -100,9 +95,10 @@ class _SignInState extends State<SignIn> {
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.remove_red_eye_outlined, color: Colors.grey,),
                             onPressed: (){
-                              setState(() {
-                                isObscurePassword = !isObscurePassword ;
-                              });
+                              // setState(() {
+                              //   isObscurePassword = !isObscurePassword ;
+                              // }
+                             // );
                             },
                           ),
                           hintText: 'password',
@@ -166,3 +162,4 @@ class _SignInState extends State<SignIn> {
     );
   }
 }
+

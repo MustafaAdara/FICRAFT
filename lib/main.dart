@@ -14,8 +14,7 @@ void main() => runApp(MaterialApp(
   initialRoute: '/testing',
   routes:{
     '/loading':(context) => const Loading(),
-    '/signIn':(context) => const SignIn(),
-    '/testing':(context) => const SignIn(),
+    '/signIn':(context) => SignIn(),
     '/code':(context)=> const Code(),
     '/catalogs':(context)=> const Catalogs(),
     '/request':(context)=> const Request(),
