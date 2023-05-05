@@ -45,10 +45,11 @@ class _CodeState extends State<Code> {
                 child: TextFormField(
                   validator: (email){
                     if (email!.isEmpty || !email.contains('@') || !email.contains('.com')){
-                      return 'Invalid E-mail';  } },
+                      return 'Invalid E-mail';  }
+                    return 'well done'; },
                   onSaved: (value){
                     email = value!;
-                    print(email);
+                    //print(email);
                   },
                   decoration: InputDecoration(
                       hintText: 'Email',
@@ -78,10 +79,11 @@ class _CodeState extends State<Code> {
                   obscureText: true,
                   validator: (password){
                     if(password!.isEmpty || password.length < 6 ){
-                      return 'Password should be at least 6 char ';}},
+                      return 'Password should be at least 6 char ';}
+                    return 'well done'; },
                   onSaved: (value){
                     password = value!;
-                    print(password);
+                    //print(password);
                   },
                   decoration: InputDecoration(
                       hintText: 'password',

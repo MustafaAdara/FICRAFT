@@ -5,11 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:fortestpages/customized/FormButton.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fortestpages/pages/signin/cubit/cubit.dart';
+import 'package:fortestpages/pages/signin/cubit/model_signin.dart';
 import 'package:fortestpages/pages/signin/cubit/states.dart';
 
-
 class SignIn extends StatelessWidget {
-   SignIn({Key? key}) : super(key: key);
+
+  late SignInDetails info;
 
   bool isObscurePassword = true;
   String email = "";
@@ -134,7 +135,9 @@ class SignIn extends StatelessWidget {
 
                       const SizedBox(height: 4,),
                       TextButton(
-                        onPressed: (){},
+                        onPressed: (){
+                          Navigator.pushNamed(context, '/back_code');
+                        },
                         child: const Text('Forget password ?', style: TextStyle(fontSize: 16, color: Colors.black,decoration: TextDecoration.underline),),
                       ),
 
@@ -143,7 +146,9 @@ class SignIn extends StatelessWidget {
                         children:  [
                           const Text('Have account?'),
                           TextButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              Navigator.pushNamed(context, '/register');
+                            },
                             child: const Text('Make new account', style: TextStyle(fontSize: 14, color: Colors.black,decoration: TextDecoration.underline),),
                           ),
                         ],
