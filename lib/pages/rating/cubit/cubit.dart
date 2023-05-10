@@ -7,5 +7,5 @@ class RatingCubit extends Cubit<RatingStates>
 
   RatingCubit(): super(RatingInitialState());
 
-  static RatingInitialState get(context) => BlocProvider.of(context);
+  static RatingCubit get(context) => BlocProvider.of(context);
 }

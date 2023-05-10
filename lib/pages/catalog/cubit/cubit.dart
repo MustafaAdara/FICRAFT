@@ -7,5 +7,5 @@ class CatalogCubit extends Cubit<CatalogStates>
 
   CatalogCubit(): super(CatalogInitialState());
 
-  static CatalogInitialState get(context) => BlocProvider.of(context);
+  static CatalogCubit get(context) => BlocProvider.of(context);
 }

@@ -5,7 +5,7 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordStates>
 {
   ForgetPasswordCubit() : super(ForgetPasswordInitialState());
 
-  static ForgetPasswordInitialState get(context) => BlocProvider.of(context);
+  static ForgetPasswordCubit get(context) => BlocProvider.of(context);
 
 }
 

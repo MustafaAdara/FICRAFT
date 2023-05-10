@@ -5,5 +5,5 @@ class SignInCubit extends Cubit<SignInStates>
 {
   SignInCubit(): super (SignInInitialState());
 
-  static SignInInitialState get(context) => BlocProvider.of(context);
+  static SignInCubit get(context) => BlocProvider.of(context);
 }

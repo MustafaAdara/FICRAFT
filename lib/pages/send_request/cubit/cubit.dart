@@ -6,5 +6,5 @@ class RequestCubit extends Cubit<RequestStates>
 {
   RequestCubit(): super(RequestInitialState());
 
-  static RequestInitialState get(context) => BlocProvider.of(context);
+  static RequestCubit get(context) => BlocProvider.of(context);
 }

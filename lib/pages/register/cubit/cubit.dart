@@ -5,6 +5,6 @@ class RegisterCubit extends Cubit<RegisterStates>
 {
   RegisterCubit(): super (RegisterInitialState());
 
-  static RegisterInitialState get(context) => BlocProvider.of(context);
+  static RegisterCubit get(context) => BlocProvider.of(context);
 }
 
